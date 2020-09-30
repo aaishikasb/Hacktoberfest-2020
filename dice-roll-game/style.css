@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	background-image: url("back.jpg");
+	background-size: cover;
+}
+
+.game-div{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.row{
+	position: relative;
+}
+
+.points-table,
+.player1final,
+.player2final{
+	padding: 10px;
+}
+
+.points-table p{
+	margin-bottom: 0;
+	font-size: 22px;
+}
+
+.player1final,
+.player2final{
+	margin-bottom: 0;
+}
+
+.player-1, 
+.player-2{
+	background-color: white;
+	padding: 100px;
+	padding-left: 120px;
+	padding-right: 120px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid red;
+	border-radius: 10px;
+}
+
+.player-1{
+	border-top-right-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+/*	background-color: #E8E8E8;*/
+}
+
+.player-2{
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+}
+
+.player-score1,
+.player-score2{
+	text-align: center;
+}
+
+.bg-grey{
+	background-color: #E8E8E8;
+}
+
+.color-red{
+	color: red;
+}
+
+.current-score1,
+.current-score2{
+	margin-top: 50px;
+	text-align: center;
+	background-color: red;
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.current-score1 p,
+.current-score2 p{
+	margin-bottom: 0px !important;
+	font-size: 24px !important;
+	letter-spacing: 1px;
+}
+
+.player-1 p,
+.player-2 p{
+	font-size: 36px;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+.new-game-btn {
+	cursor: pointer;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	transform: translateX(-50%);
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+.roll-dice-btn {
+	cursor: pointer;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 56%;
+	transform: translateX(-50%);
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+.hold-btn {
+	cursor: pointer;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 71%;
+	transform: translateX(-50%);
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+img {
+	box-shadow: 0px 0px 25px 0px red;
+	border-radius: 10%;
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translateX(-50%);
+}
+
+.new-game-btn i,
+.roll-dice-btn i,
+.hold-btn i{
+	padding: 5px;
+}
+
+.new-game-btn a,
+.roll-dice-btn a,
+.hold-btn a{
+	padding: 5px;
+	color: black !important;
+	text-decoration: none !important;
+}
+
+

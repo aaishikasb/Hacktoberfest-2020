@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Dice Game</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha512-znmTf4HNoF9U6mfB6KlhAShbRvbt4CvCaHoNV0gyssfToNQ/9A0eNdUbvsSwOIUoJdMjFG2ndSvr0Lo3ZpsTqQ==" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha512-jCaU0Dp3IbMDlZ6f6dSEQSnOrSsugG6F6YigRWnagi7HoOLshF1kwxLT4+xCZRgQsTNqpUKj6WmWOxsu9l3URA==" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" />
+
+</head>
+<body>
+	<div class="game-div">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-6 col-sm-12 player-1" id="player-1">
+					<div class="player-score1">
+						<p>Player 1</p>
+						<p id="player-1-score">0</p>
+					</div>
+					<div class="current-score1">
+						<p>Current Score</p>
+						<p id="player-1-current">0</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-6 col-sm-12 player-2" id="player-2">
+					<div class="player-score2">
+						<p>Player 2</p>
+						<p id="player-2-score">0</p>
+					</div>
+					<div class="current-score2">
+						<p>Current Score</p>
+						<p id="player-2-current">0</p>
+					</div>
+				</div>
+
+				<div class="new-game-btn" id="new-game-btn" onclick="newgame()">
+					<i class="fas fa-plus-circle"></i><a href="javascript:" role="button">New Game</a>
+				</div>
+
+				<div class="roll-dice-btn" onclick="rolldice()">
+					<i class="fas fa-sync-alt"></i><a href="javascript:" role="button">Roll Dice</a>
+				</div>
+
+				<div class="hold-btn" onclick="hold()">
+					<i class="fas fa-pause-circle"></i><a href="javascript:" role="button">Hold</a>
+				</div>
+
+				<img src="dice-1.png" id="myImg" />
+
+		  	</div>
+
+		  	<div class="row" style="background-color: white;">
+		  		<div class="col-md-12 col-lg-12 col-sm-12">
+					<div class="points-table" style="text-align: center;">
+						<p> Points Table </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="background-color: white;">
+				<div class="col-md-5 col-lg-5 col-sm-5">
+				</div>
+				<div class="col-md-1 col-lg-1 col-sm-1 player1final" style="text-align: center;">
+					<p> Player 1 </p>
+					<p id="player-1-final"> 0 </p>
+				</div>
+				<div class="col-md-1 col-lg-1 col-sm-1 player2final" style="text-align: center;">
+					<p> Player 2 </p>
+					<p id="player-2-final"> 0 </p>
+				</div>
+				<div class="col-md-5 col-lg-5 col-sm-5">
+				</div>
+			</div>
+
+		  	</div>
+		</div>
+
+	</div>
+
+
+
+	<script src="app.js"></script>
+</body>
+</html> 
