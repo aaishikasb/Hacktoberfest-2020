@@ -1,5 +1,5 @@
 # Calculator
-A basic python calculator project
+A  python calculator project
 
 ## How to Use
 
