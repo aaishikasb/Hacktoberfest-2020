@@ -107,6 +107,7 @@ Please add your name in the list in the following format:
 
 ` - Name - [File Name](File Address)`
 - [Aaishika S Bhattacharya](https://www.github.com/aaishikasb) - [README](README.md)
+- [Rahul N Panchal](https://www.github.com/iamrahulpanchal) - [README](README.md)
 
 Please do not spam the repository with unnecessary Pull Requests. Happy Hacking!
 
