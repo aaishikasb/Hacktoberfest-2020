@@ -1,18 +1,3 @@
-<style>
-    h2, h3, ul li{
-        font-family: 'Calibri';
-    }
-    li{
-        font-size: 18px;
-    }
-    img{
-        width: 1000px;
-        height: auto;
-        border: 1px solid black;
-        border-radius: 5px;
-    }
-</style>
-
 <h2>Dice Roll (Pig Game) Created Using HTML, CSS & JavaScript</h2>
 
 <h3>How to Play?</h3>
