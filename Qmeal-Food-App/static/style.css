@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Barrio&family=Knewave&family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Merriweather:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fefefd;
+  background: url("e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-container {
+  display: none;
+}
+
+section {
+  position: relative;
+  margin-top: 5%;
+  display: none;
+  background-color: rgba(8, 8, 8, 0.9);
+  padding: 2rem 2rem;
+  text-align: center;
+  width: 70%;
+  box-shadow: 0px 0px 50px black;
+  border-radius: 5px;
+}
+#head {
+  display: block;
+}
+#result {
+  min-height: 650px;
+  max-height: 100%;
+  margin-top: 1%;
+  width: 95%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+h1 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 110px;
+  color: orange;
+}
+.well-intro {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  color: whitesmoke;
+}
+.btn {
+  margin-top: 40px;
+  background: rgba(218, 38, 37);
+  width: 180px;
+  padding: 8px 4px;
+  font-family: "Bangers", cursive;
+  font-size: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #f6e324;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(218, 38, 37);
+}
+.btn:focus {
+  outline: none;
+}
+.fa-angle-right {
+  margin-left: 10px;
+}
+.fa-search {
+  margin-left: 10px;
+}
+.app-name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  color: black;
+  background-color: #f6e324;
+  font-family: "Nosifer", cursive;
+  font-size: 18px;
+}
+
+/* cuisine pick */
+.cuisine {
+  font-size: 35 px;
+  color: orange;
+  font-family: "Montserrat", sans-serif;
+}
+.cuisine-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+
+  width: 500px;
+  margin: auto;
+  justify-items: center;
+  margin-top: 30px;
+}
+.each-cuisine {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+.cuisine-image {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px whitesmoke;
+}
+.each-cuisine input {
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  background: black;
+  z-index: 100;
+}
+.each-cuisine input:checked ~ .custom-add {
+  display: block;
+}
+.each-cuisine input ~ .custom-add {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+  margin: 0px;
+  background-color: rgba(227, 167, 61, 0.8);
+}
+.shot {
+  transform: rotate(-40deg);
+  position: absolute;
+  font-size: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 4px 4px;
+  top: 40%;
+  left: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px dashed black;
+  border-radius: 2px;
+  font-family: monospace;
+}
+.cuisine-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  width: 200px;
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  padding: 4px 10px;
+  font-family: "Merriweather", serif;
+}
+
+/* result */
+
+.loader {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.loader-img {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+.message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  color: black;
+  background-color: #f6e324;
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  padding: 4px 15px;
+}
+#back {
+  display: none;
+}
+/* each-meal */
+
+.meal-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  margin: auto;
+  justify-items: center;
+  margin-top: 30px;
+}
+.each-meal {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+.each-meal:hover {
+  opacity: 0.5;
+}
+.meal-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.btn2 {
+  position: absolute;
+
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn2:hover {
+  cursor: pointer;
+}
+.message {
+  cursor: pointer;
+}
+
+.meal-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  width: 100%;
+  color: whitesmoke;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  padding: 4px 10px;
+  font-family: "Merriweather", serif;
+}
+
+/* dish section  */
+
+.about-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  grid-gap: 30px;
+  display: none;
+  border: 2px solid white;
+  margin: 2%;
+}
+
+.dish-banner {
+  text-align: center;
+}
+#dish-image {
+  margin-top: 20px;
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.dish-steps {
+  border: 2px solid white;
+  text-align: center;
+  padding: 4px 10px;
+  border: 1px dashed #f6e324;
+}
+#dish-prep {
+  width: 850px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-family: "Merriweather", serif;
+  color: whitesmoke;
+}
+.ingredients {
+  width: 850px;
+  text-align: center;
+}
+.each-ingredient {
+  display: inline-block;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #f6e324;
+  color: black;
+  margin-top: 40px;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.main-back {
+  display: block;
+  background-color: #f6e324;
+  width: 200px;
+  margin: auto;
+  font-size: 20px;
+  padding: 4px 4px;
+  color: black;
+  outline: none;
+  border: none;
+}
+.main-back:hover {
+  background: rgb(23, 23, 23);
+  color: #f6e324;
+}
+#dish-name {
+  font-size: 28px;
+  font-family: "Amatic SC", cursive;
+  padding: 10px 4px;
+  border-bottom: 2px solid whitesmoke;
+  color: whitesmoke;
+}
+.inst {
+  font-family: "Montserrat", sans-serif;
+  size: 20px;
+  color: #f6e324 !important;
+}
+.greet {
+  color: #f6e324;
+  font-size: 50px;
+  padding: 10px 10px;
+  font-family: "Amatic SC", cursive;
+  margin-bottom: 20px;
+}
