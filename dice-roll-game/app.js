@@ -6,7 +6,7 @@ let player1Turn = true;
 let player2Turn = false;
 let player1final = 0;
 let player2final = 0;
-
+//function for new game
 function newgame(){
 	let player2Div = document.getElementById("player-2");
 	player2Div.classList.remove("bg-grey");
@@ -21,7 +21,7 @@ function newgame(){
 	document.getElementById('player-2-current').innerHTML = currentscore2;
 	document.getElementById('myImg').src = 'dice-1.png';
 }
-
+//function for dice roll
 function rolldice(){
 	if(player1Turn === true){
 		console.log(player1Turn);
@@ -105,7 +105,7 @@ function rolldice(){
 		}
 	}
 }
-
+//function for hold
 function hold(){
 	if(player1Turn === true){
 		player1Turn = false;
