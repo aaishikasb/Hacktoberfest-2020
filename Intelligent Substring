@@ -1,0 +1,44 @@
+#include <iostream>
+    #include<vector>
+    #include<unordered_map>
+    #include<climits>
+    using namespace std;
+     
+    int getSpecialSubString(string s, int k, string charValue) {
+    	std::vector<int> list;
+    	unordered_map<char,int> charVal;
+     
+    	for(int i = 0; i < charValue.length(); ++i) {
+    		charVal['a'+i] = charValue[i] - '0';
+    	}
+    	int i =0, start = 0, j = 0;
+    	int count = 0;
+    	int len = INT_MIN;
+    	for(; i < s.length(); ++i) {
+    		if(charVal[s[i]]) {
+    			len = max(len, i-start+1);
+    			continue;
+    		}else{
+    			list.push_back(i);
+    			count++;
+    			if(count <=k){
+    				len = max(len, i-start+1);
+    			}else{
+    				start = list[j]+1;
+    				j++;
+    				count --;
+    				len = max(len, i-start+1);
+    			}
+    		}
+    	}
+    	return len;
+    }
+     
+    int main() {
+    	//You can also take the input from the user 
+    	string s = "giraffe";
+    	int k = 2;
+     
+    	cout << getSpecialSubString(s,k,"10101111111111111111111111");
+    	return 0;
+    }
