@@ -1,0 +1,16 @@
+{
+  "name": "movie_search_app",
+  "version": "1.0.0",
+  "description": "type movie name and get atleat 10 movies matching your request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
