@@ -1,8 +1,8 @@
 
 /**
  * Write a description of class LuckyNumberAlternative here.
- * 
- * @author (your name) 
+ * Finding series of lucky numbers
+ * @author (your name) Eeshan Dutta
  * @version (a version number or a date)
  */
 import java.util.Scanner;
