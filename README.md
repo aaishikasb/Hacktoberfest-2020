@@ -107,6 +107,7 @@ Please add your name in the list in the following format:
 
 ` - Name - [File Name](File Address)`
 - [Aaishika S Bhattacharya](https://www.github.com/aaishikasb) - [README](README.md)
+- [Sulthan Mohaideen N K](https://github.com/SulthanNK) - [Gradient-Background-Generator](https://github.com/SulthanNK/Hacktoberfest-2020/tree/master/Gradient-Background-Generator)
 
 Please do not spam the repository with unnecessary Pull Requests. Happy Hacking!
 
