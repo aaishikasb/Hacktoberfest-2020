@@ -86,7 +86,7 @@ Note that it is mandatory for you to add a Commit Message for others to understa
 git push --set-upstream origin (name of your branch)
 ```
 
-While you are at it, also execute the following command which will specify a new remote upstream repository (the cone you are looking at).
+While you are at it, also execute the following command which will specify a new remote upstream repository (the one you are looking at).
 
 ```bash
 > git remote add upstream https://github.com/aaishikasb/Hacktoberfest-2020.git
