@@ -30,6 +30,11 @@ def div(a, b):
 
 def power(a, b):
     return a**b
+# remainder function
+# a -- dividend
+# b -- divisor
+def rem(a, b):
+    return a%b
 
 
 # -------------------------------------------------------- #
@@ -67,6 +72,8 @@ while (True):
             print ("Quotient: ", div(a, b))
         elif (op == "^" or op == "**"):
             print ("Power: ", power(a, b))
+        elif (op == "%"):
+            print ("remainder: ", rem(a, b))
         else:
             print ("Invalid operation...")
 
