@@ -96,17 +96,17 @@ While you are at it, also execute the following command which will specify a new
 
 You need to use the following commands to help you sync all the branches with their respective commits associated with this repository and stay in loop. Copy these commands and execute:
 
-```bash 
+```bash
 > git fetch upstream
 ```
 
-```bash 
+```bash
 > git checkout master
 ```
 
 Post this you simply need to merge all the changes you made.
 
-```bash 
+```bash
 > git merge upstream/master
 ```
 
@@ -126,6 +126,7 @@ Some important commands that you are going to need are listed below:
 ```
 
 **The most important commands now are as below:**
+
 ```bash
 > git add .` or `git add -A
 > git commit -m "MESSAGE"
@@ -154,6 +155,6 @@ Please add your name in the list in the following format:
 - [EeshanDutta007](https://www.github.com/EeshanDutta007) - [README](README.md)
 - [Shubhika Shubhavee](https://www.github.com/shubhavee) - [README](README.md)
 - [Abner Souza](https://github.com/abnersouza) - [README](README.md)
-
+- [Vipin Chandra](https://github.com/Easyvipin) - [Qmeal-Food-App](https://github.com/aaishikasb/Hacktoberfest-2020/tree/master/Qmeal-Food-App);
 
 Please do not spam the repository with unnecessary Pull Requests. Happy Hacking!

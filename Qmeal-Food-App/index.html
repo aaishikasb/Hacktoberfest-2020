@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./static/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./page.js" defer></script>
+    <title>Qmeal</title>
+  </head>
+  <body>
+    <!-- header container -->
+
+    <section id="head">
+      <h1>Qmeal</h1>
+      <p class="well-intro">Find the next meal you want to cook!</p>
+      <button class="btn start" id="start" onclick="toggle(event)">
+        Lets Find!<i class="fa fa-angle-right" style="font-size: 30px"></i>
+      </button>
+    </section>
+
+    <!-- main-container  -->
+    <section id="meal">
+      <span class="app-name">Qmeal.io</span>
+      <h3 class="cuisine">Pick your Cuisine &#128520;</h3>
+      <div class="cuisine-container">
+        <div class="each-cuisine">
+          <img src="./static/chinese.jpg" alt="" class="cuisine-image" />
+          <input
+            type="checkbox"
+            name="chinese"
+            value="chinese"
+            id="cuisine-type"
+            class="type"
+          />
+          <span class="custom-add"><h4 class="shot">ADDED&#127860;</h4></span>
+          <span class="cuisine-name">Chinese</span>
+        </div>
+        <div class="each-cuisine">
+          <img src="./static/italian.jpg" alt="" class="cuisine-image" />
+          <input
+            type="checkbox"
+            name="italian"
+            value="italian"
+            id="cuisine-type"
+            class="type"
+          />
+          <span class="custom-add"><h4 class="shot">ADDED&#127860;</h4></span>
+          <span class="cuisine-name">Italian</span>
+        </div>
+        <div class="each-cuisine">
+          <img src="./static/american.jpg" alt="" class="cuisine-image" />
+          <input
+            type="checkbox"
+            name="american"
+            value="american"
+            id="cuisine-type"
+            class="type"
+          />
+          <span class="custom-add"><h4 class="shot">ADDED&#127860;</h4></span>
+          <span class="cuisine-name">American</span>
+        </div>
+        <div class="each-cuisine">
+          <img src="./static/spainish.jpg" alt="" class="cuisine-image" />
+          <input
+            type="checkbox"
+            name="spanish"
+            value="spanish"
+            id="cuisine-type"
+            class="type"
+          />
+          <span class="custom-add"><h4 class="shot">ADDED&#127860;</h4></span>
+          <span class="cuisine-name">Spanish</span>
+        </div>
+      </div>
+      <button class="btn start" id="search" onclick="toggle(event);">
+        Search<i class="fa fa-search" style="font-size: 30px"></i>
+      </button>
+    </section>
+
+    <!-- result  -->
+
+    <section id="result">
+      <span class="app-name">Qmeal.io</span>
+      <div class="loader">
+        <img src="./static/s2.svg" alt="" class="loader-img" />
+        <span class="message" id="message">Searching for Meal...</span>
+      </div>
+      <div class="meal-container" id="allMeals"></div>
+      <button class="message" id="back" onclick="toggle(event);">
+        Go Back
+      </button>
+    </section>
+
+    <section class="about-wrapper" id="result-dish">
+      <div class="dish-banner">
+        <button class="main-back">
+          <i class="fa fa-angle-left" style="font-size: 24px"></i> Omeal.io
+        </button>
+        <img
+          src="https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg"
+          alt=""
+          id="dish-image"
+        />
+
+        <h3 id="dish-name">.............</h3>
+      </div>
+
+      <div class="ingredients" id="ing">.............</div>
+      <div class="dish-steps">
+        <h4 class="inst">Instructions</h4>
+        <p id="dish-prep">
+          ------------------------------------------------------------------------------------------
+        </p>
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        id="ytv"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+
+      <span class="greet">​let’s get rolling &#127861;</span>
+    </section>
+    <section id="result-dish"></section>
+  </body>
+</html>
