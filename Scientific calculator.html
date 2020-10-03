@@ -1,0 +1,183 @@
+<html>
+   <head>
+      <script>
+      function insert(val){
+         document.getElementById("display").value+=val
+      }
+      function clr(){
+         document.getElementById("display").value = " "
+      }
+      function equal(){
+        var res = document.getElementById("display").value;
+        if (res)
+        {
+         document.getElementById("display").value = eval(res)
+        }
+      }
+      function back(){
+        var res = document.getElementById("display").value;
+           
+        document.getElementById("display").value = res.substring(0,res.length-1);
+      
+      }
+      function log()
+      {
+         var a = document.getElementById("display").value;
+         document.getElementById("display").value = Math.log(a);
+      }
+      function sin()
+      {
+         var a = document.getElementById("display").value;
+         document.getElementById("display").value = Math.sin(a);
+
+      }
+      function cos()
+      {
+         var a = document.getElementById("display").value;
+         document.getElementById("display").value = Math.cos(a);
+      }
+      function tan()
+      {
+         var a = document.getElementById("display").value;
+         document.getElementById("display").value = Math.tan(a);
+      }
+      function sqrt() 
+      {
+         var a = document.getElementById("display").value;
+         document.getElementById("display").value = Math.sqrt(a);
+      }
+      function pow()
+      {
+         var a = document.getElementById("display").value;
+         var b = document.getElementById("display").value;
+         document.getElementById("display").value = Math.pow(a,b);
+      }
+      function sq() 
+      {
+         var a = document.getElementById("display").value;
+         document.getElementById("display").value =Math.pow(a,2);
+      }
+      function fact()
+      {
+         var a = document.getElementById("display").value;
+         size = document.getElementById("display").value.length; 
+                n = Number(a.substring(0, size-1)); 
+                f = 1; 
+               for(i = 2; i <= n; i++)
+                {
+                  f = f*i; 
+             
+                  }
+                  document.getElementById("display").value=f;
+      }
+      function sign()
+{
+   var a = document.getElementById("display").value;
+   if(a.substring(0, 1) == "-")
+   document.getElementById("display").value=document.getElementById("display").value.substring(1, input.value.length);
+	else
+   document.getElementById("display").value= "-" + document.getElementById("display").value;
+}
+      </script>
+
+      <style>
+         *{
+            margin:0;
+            padding: 0;
+         }
+         .b1{
+            width: 50;
+            height: 50;
+            font-size:25;
+            margin: 2;
+            background-color:dimgrey;
+
+         }
+         .textview{
+            width: 217;
+            margin: 5;
+         }
+         .a1
+         {
+            margin: 2;
+            width:220;
+            height:80;
+            background-color:dimgrey;
+            text-align: right;
+            font-size: medium;
+            color: ghostwhite;
+
+         }
+         .r1{
+            background-color:rgb(0, 0, 0);
+            width:225px;
+         }
+      </style>
+
+   </head>
+
+<body>
+<h3>CALCULATOR</h3>
+<br>
+<br>
+<div class="r1">
+<form name= f1>
+<input type="text" class="a1" id="display">
+<br>  
+</form>
+<table>
+   <tr> 
+      <td> <input type="button" value="c" class="b1"onclick="clr()"></td>     
+      <td> <input type="button" value="del" class="b1"onclick="back()"></td>
+      <td> <input type="button" value="(" class="b1"onclick="insert('(')"></td>     
+      <td> <input type="button" value=")" class="b1"onclick="insert(')')"></td>        
+</tr>
+<tr> 
+   <td> <input type="button" value="+/-" class="b1"onclick="sign()"></td>     
+   <td> <input type="button" value="sq" class="b1"onclick="sq()"></td>     
+   <td> <input type="button" value="pi" class="b1"onclick="insert(3.14)"></td>     
+   <td> <input type="button" value="n!" class="b1"onclick="fact()"></td>     
+</tr>
+<tr> 
+   <td> <input type="button" value="cos" class="b1"onclick="cos()"></td>     
+   <td> <input type="button" value="sin" class="b1"onclick="sin()"></td>     
+   <td> <input type="button" value="tan" class="b1"onclick="tan()"></td>     
+   <td> <input type="button" value="log" class="b1"onclick="log()"></td>     
+</tr>
+   
+<tr>
+   <td> <input type="button" value="sqrt" class="b1"onclick="sqrt()"></td>     
+   <td> <input type="button" value="exp" class="b1"onclick="exp()"></td>     
+   <td> <input type="button" value="x" class="b1"onclick="insert('*')"></td>     
+   <td> <input type="button" value="/" class="b1"onclick="insert('/')"></td>     
+</tr>   
+ <tr> 
+            <td> <input type="button" value="7" class="b1"onclick="insert(7)"></td>     
+            <td> <input type="button" value="8"class="b1"onclick="insert(8)"></td>     
+            <td> <input type="button" value="9"class="b1"onclick="insert(9)"></td>     
+            <td> <input type="button" value="-"class="b1"onclick="insert('-')"></td>     
+</tr>
+         <tr> 
+            <td> <input type="button" value="4"class="b1"onclick="insert(4)"></td>     
+            <td> <input type="button" value="5"class="b1"onclick="insert(5)"></td>     
+            <td> <input type="button" value="6"class="b1"onclick="insert(6)"></td>     
+            <td> <input type="button" value="+"class="b1"onclick="insert('+')"></td>     
+ </tr>
+         <tr> 
+            <td> <input type="button" value="1"class="b1" onclick="insert(1)"></td>     
+            <td> <input type="button" value="2"class="b1"onclick="insert(2)"></td>     
+            <td> <input type="button" value="3"class="b1"onclick="insert(3)"></td>     
+            <td rowspan="2"> <input type="button" value="="class="b1" onclick="equal()" style="height:110;"></td>     
+ </tr>
+ <tr> 
+   <td colspan="2"> <input type="button" value="0"class="b1" onclick="insert(0)" style="width:106;"></td>     
+   <td> <input type="button" value="."class="b1"onclick="insert('.')"></td>     
+       
+</tr>
+</table>
+</div>
+
+
+</body>
+
+</html>
